@@ -3,11 +3,11 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: We use constraint propagation to check peers of all the items in a sudoku matrix to see if any of their same row or same column peers have the same value as the original box (and the value of each naked twin should have only a length of 2). Constraint propagation is used to apply a specific condition until a solution is achieved, or the problem set cannot be narrowed down anymore. By narrowing down to either the same row or column, we are able to solely look at the same row or same column to eliminate any values from that row / column which cannot contain the values of the naked twins (since each of the naked twins will one of those two values). 
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: We add the two sudoku diagonals to the unitlist as additional constraits to the original sudoku solver. This ensures that everytime we use eliminate and only_choice, the diagonals are now part of the peers so that we can verify that 1-9 shows up exactly once on the diagonals in addition to all the other conditions for regular sudoku. 
 
 ### Install
 
